@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "824722609795",
+    "firebase_url": "https://to-do-d220f.firebaseio.com",
+    "project_id": "to-do-d220f",
+    "storage_bucket": "to-do-d220f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824722609795:android:6b31d6eb2be90be633edb6",
+        "android_client_info": {
+          "package_name": "com.github.xiaoming857.to_do"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824722609795-5j6ffnmhtgfbsgtpjjqbq0evnmkao4pt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.github.xiaoming857.to_do",
+            "certificate_hash": "1074da5c5ea3f6737264194b642e6b587dc9670c"
+          }
+        },
+        {
+          "client_id": "824722609795-ueg5m7qbota4rs8uh2rtvmh9re4tr1n2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe2yMxc3nn1j-tvQd4oj8DKIQ6RrtdbbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824722609795-ueg5m7qbota4rs8uh2rtvmh9re4tr1n2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

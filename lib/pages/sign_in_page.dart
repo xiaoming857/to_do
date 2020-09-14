@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -5,6 +6,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:to_do/widgets/beng_divider.dart';
 import 'package:to_do/widgets/sign_in_icon_button.dart';
 import 'package:to_do/pages/sign_up_page.dart';
+import 'package:to_do/services/auth.dart';
 
 
 class SignInPage extends StatefulWidget {
@@ -13,6 +15,8 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
+  Auth auth = Auth();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -148,11 +152,11 @@ class _SignInPageState extends State<SignInPage> {
 
                                 onTap: () {
                                   Navigator.of(context).push(
-                                      MaterialPageRoute(
-                                          builder: (_) {
-                                            return SignUpPage();
-                                          }
-                                      )
+                                    MaterialPageRoute(
+                                      builder: (_) {
+                                        return SignUpPage();
+                                      }
+                                    )
                                   );
                                 },
                               ),
@@ -180,14 +184,19 @@ class _SignInPageState extends State<SignInPage> {
                             icon: MdiIcons.google,
                             iconColor: Colors.white,
                             buttonColor: Colors.redAccent,
-                            onPressed: () {},
+                            onPressed: () async {
+                              User user = await auth.signInWithGoogle();
+                              print(user.email);
+                            },
                           ),
 
 
                           SignInIconButton(
                             icon: MdiIcons.facebook,
                             iconColor: Colors.indigo,
-                            onPressed: () {},
+                            onPressed: () {
+                              auth.signOut();
+                            },
                           ),
                         ],
                       )
